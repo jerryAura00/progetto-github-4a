@@ -1,0 +1,130 @@
+```javascript
+// ===============================
+// ASSOCIAZIONE CULTURALE
+// SOLO JAVASCRIPT
+// ===============================
+
+// ----- EVENTI -----
+
+const eventi = [
+    {
+        titolo: "Mostra Fotografica",
+        data: "20 Giugno 2026",
+        luogo: "Roma"
+    },
+
+    {
+        titolo: "Laboratorio Artistico",
+        data: "5 Luglio 2026",
+        luogo: "Milano"
+    },
+
+    {
+        titolo: "Conferenza Cultura Digitale",
+        data: "18 Agosto 2026",
+        luogo: "Torino"
+    }
+];
+
+// ----- PROGETTI -----
+
+const progetti = [
+    {
+        nome: "Arte per Tutti",
+        descrizione: "Supporto agli artisti emergenti"
+    },
+
+    {
+        nome: "Biblioteca Aperta",
+        descrizione: "Condivisione gratuita di libri"
+    },
+
+    {
+        nome: "Festival Urbano",
+        descrizione: "Eventi artistici nelle piazze"
+    }
+];
+
+// ----- STAMPA EVENTI -----
+
+console.log("===== EVENTI =====");
+
+eventi.forEach(evento => {
+
+    console.log(`
+Titolo: ${evento.titolo}
+Data: ${evento.data}
+Luogo: ${evento.luogo}
+    `);
+
+});
+
+// ----- STAMPA PROGETTI -----
+
+console.log("===== PROGETTI =====");
+
+progetti.forEach(progetto => {
+
+    console.log(`
+Nome: ${progetto.nome}
+Descrizione: ${progetto.descrizione}
+    `);
+
+});
+
+// ----- FORM VOLONTARIO -----
+
+function candidaturaVolontario(nome, email, motivazione){
+
+    if(nome === "" || email === "" || motivazione === ""){
+
+        console.log("Compila tutti i campi");
+        return;
+    }
+
+    const volontario = {
+        nome: nome,
+        email: email,
+        motivazione: motivazione
+    };
+
+    console.log("Candidatura inviata con successo!");
+
+    console.log(volontario);
+}
+
+// ----- TEST FUNZIONE -----
+
+candidaturaVolontario(
+    "Mario Rossi",
+    "mario@email.com",
+    "Vorrei aiutare negli eventi culturali"
+);
+
+// ----- ACCESSIBILITÀ -----
+
+const accessibilita = {
+    contrastoElevato: true,
+    fontLeggibile: true,
+    navigazioneFacile: true
+};
+
+console.log("===== ACCESSIBILITÀ =====");
+console.log(accessibilita);
+
+// ----- MENU NAVIGAZIONE -----
+
+const pagine = [
+    "Home",
+    "Eventi",
+    "Progetti",
+    "Volontari"
+];
+
+console.log("===== MENU =====");
+
+for(let i = 0; i < pagine.length; i++){
+
+    console.log((i + 1) + ". " + pagine[i]);
+}
+```
